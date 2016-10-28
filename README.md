@@ -2,6 +2,10 @@ This is an app for hosting [ideological turing tests](https://en.wikipedia.org/w
 
 ## Installation
 
-* `composer install`
 * `cp .env.development.example .env`
-* fill in the rest of your .env file
+* set up a mysql database and fill in the rest of .env
+
+* `composer install`
+* `vendor/bin/phinx migrate`
+* `php -S localhost:8000`
+* open [http://localhost:8000](http://localhost:8000)

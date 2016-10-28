@@ -4,7 +4,7 @@ function onGoogleAuth(googleUser) {
   xhr.open('POST', '/auth');
   xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
   xhr.onload = function() {
-    //location.reload()
+    location.reload()
   };
   xhr.send('id_token=' + id_token);
 };

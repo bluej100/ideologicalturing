@@ -7,6 +7,7 @@
     "require": {
         "twig/twig": "~1.0",
         "klein/klein": "^2.1",
-        "vlucas/phpdotenv": "^2.4"
+        "vlucas/phpdotenv": "^2.4",
+        "robmorgan/phinx": "^0.6.5"
     }
 }
