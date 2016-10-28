@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    {% block head %}
+      <title>Ideological Turing tests</title>
+      <link rel="stylesheet" href="assets/global.css" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+
+      <meta name="google-signin-scope" content="email profile">
+      <meta name="google-signin-client_id" content="{{ OAUTH_CLIENT_ID }}">
+      {% if not logged_in %}
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+      {% endif %}
+      <title>{% block title %}{% endblock %} - Ideological Turing Tests</title>
+    {% endblock %}
+  </head>
+  <body>
+    <div class="container">
+      {% if not logged_in %}
+        <div class="g-signin2" data-onsuccess="onGoogleAuth"></div>
+      {% endif %}
+
+      {% block content %}{% endblock %}
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="/assets/global.js"></script>
+  </body>
+</html>

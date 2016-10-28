@@ -1,0 +1,12 @@
+{
+    "name": "bluej100/ideologicalturing",
+    "description": "An app for hosting ideological turing tests.",
+    "type": "project",
+    "homepage": "https://github.com/bluej100/ideologicalturing",
+    "license": "MIT",
+    "require": {
+        "twig/twig": "~1.0",
+        "klein/klein": "^2.1",
+        "vlucas/phpdotenv": "^2.4"
+    }
+}
